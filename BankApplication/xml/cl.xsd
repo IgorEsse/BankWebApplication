@@ -1,0 +1,24 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns="http://www.example.com/CH"
+targetNamespace="http://www.example.com/CH"
+ >
+<xsd:element name="ChangeHistiry" type="Account"/>
+
+<xsd:complexType name="Account">
+    <xsd:sequence>
+        <xsd:element name="Account" type="Action"/>
+    </xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="Action">
+    <xsd:sequence>
+        <xsd:element type="xsd:int" name="id"/>
+        <xsd:element type="xsd:string" name="balance"/>
+        <xsd:element type="xsd:string" name="open_date"/>
+        <xsd:element type="xsd:string" name="close_date"/>
+        <xsd:element type="xsd:string" name="status"/>
+        <xsd:element type="xsd:int" name="client_id"/>
+    </xsd:sequence>
+    <xsd:attribute type="xsd:string" name="action"/>
+</xsd:complexType>
+
+</xsd:schema>
